@@ -1,1 +1,66 @@
 /* Type whatever CSS you need here! */
+html{
+    font-size: 16px;
+}
+
+/* Render Name Tags */
+.nametag{
+    width: 50%;
+    margin: 20px auto;
+    font-size: 1.5em;
+    border: 1px solid black;
+}
+
+.nametag-header{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+.nametag-main{
+    padding: 50px 10px;
+}
+
+/* Render Students */
+.cards{
+    border: 1px black solid;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.present{
+    background-color: #d0f84e;
+}
+
+.absent{
+    background-color: #e07902;
+}
+
+
+/* Render Poker Hand */
+.pokercards img{
+    width: 120px;
+    margin: 10px;
+} 
+.pokerhands{
+    display: flex;
+}
+
+/* Render Restaurants */
+#restaurants{
+    display: flex;
+    text-align: left;
+}
+.restaurant{
+    background-color: #ece8e8;
+    margin: 10px auto;
+    width: 30%;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.restaurant span{
+    color: yellowgreen;
+    font-size: 2rem;
+    font-weight: bold;
+}
