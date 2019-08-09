@@ -1,8 +1,28 @@
 
 function renderMovies(movies) {
+    let divs = movies.map(function(movie){
+        return `
+        <div class="col-12 col-md-6 movie">
+            <div class="movie-inner">
+                <div class="movie-poster"><img src="${movie.poster}"></div>
+                <div class="movie-information">
+                    <h3>${movie.title}</h3>
+                    <h6>${movie.year}</h6>
+                    <div class="info">IMDB: ${movie.imdbRating}/10</div>
+                    <div class="info">Rotten Tomates: ${movie.rottenTomatoesRating}</div>
+                </div>
+            </div>
+        </div>
+        `
+    })
     return `
         <div class="text-center mt-5">
             <code>${JSON.stringify(movies)}</code>
+            <div id="movies-list" class="container-fluid">
+                <div class="row">
+                    ${divs.join('')}
+                </div>
+            </div>
         </div>
     `
 }

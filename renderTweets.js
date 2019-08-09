@@ -1,8 +1,37 @@
 
 function renderTweets(tweets) {
+    let divs = tweets.map(function(tweet){
+        return `
+            <div class="col-12 col-md-6 tweet">
+                <div class="tweet-inner">
+                    <div class="tweet-user">
+                        <div><img src="${tweet.user.profilePic}"></div>
+                        <div class="tweet-user-info">
+                            <div class="tweet-user-username">${tweet.user.username}
+                                <span>${tweet.user.isVerified && '<i class="fas fa-certificate"></i>'}</span>
+                            </div>
+                            <div class="tweet-user-handle">${tweet.user.handle}</div>
+                        </div>
+                    </div>    
+                    <div class="tweet-text">${tweet.text}</div>
+                    <hr>
+                    <div class="tweet-information">
+                        <div><i class="far fa-comment"></i>${tweet.replies}</div>
+                        <div><i class="fas fa-retweet"></i>${tweet.retweets}</div>
+                        <div><i class="far fa-heart"></i>${tweet.likes}</div>
+                    </div>
+                </div>
+            </div>
+        `
+    })
     return `
         <div class="text-center mt-5">
             <code>${JSON.stringify(tweets)}</code>
+            <div id="tweets" class="container">
+                <div class="row">
+                    ${divs.join('')}
+                </div>
+            </div>
         </div>
     `
 }

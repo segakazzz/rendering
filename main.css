@@ -64,3 +64,135 @@ html{
     font-size: 2rem;
     font-weight: bold;
 }
+
+/* Render Movies */
+
+.movie-inner{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #afaaaa;
+    border-radius: 5px;
+    padding: 10px;
+}
+.movie-poster img{
+    width: 150px;
+}
+.movie-information{
+    padding: 10px 10px;
+    text-align: start;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 10px;
+    flex: auto;
+    overflow: hidden;
+}
+.movie-information .info{
+    font-size: 1.3rem;
+}
+
+/* Render Tweets */
+#tweets{
+    margin: 10px;
+}
+.tweet-inner {
+    border: 1px black solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+.tweet-user {
+    display: flex;
+    text-align: left;
+    padding: 0 10px;
+}
+.tweet-user .tweet-user-info{
+    padding: 0 10px;
+}
+
+.tweet-user img{
+    width: 50px;
+}
+
+.tweet-user .tweet-user-username{
+    font-size: 1rem;
+    font-weight: bold;
+} 
+
+.tweet-user .tweet-user-username i{
+    color: #688ef7;
+}
+
+.tweet-user .tweet-user-handle{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.tweet-text{
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+.tweet-information {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 10px;
+    color: gray;
+    font-size: 0.9rem;
+}
+.tweet-information div{
+    padding: 0 10px;
+}
+
+/* Render Albums */
+#albums {
+    text-align: left;
+}
+
+#albums hr{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+.album-title{
+    display: flex;
+    align-items: flex-end;
+}
+
+.album-title img{
+    height: 80px;
+}
+
+.album-title div{
+    height: 100%;
+}
+
+.album-title h3 {
+    margin: 0 20px;
+}
+
+.album-song{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.album-song span{
+    font-size: 0.9rem;
+    padding: 0 8px;
+    color: #adadad;
+}
+
+
+/* Render Surveys */
+#surveys{
+    text-align: left;
+}
+
+#surveys form{
+    margin: 20px 0;
+}
+
+#surveys .field{
+    margin: 10px 0;
+}

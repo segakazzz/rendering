@@ -1,8 +1,38 @@
 
 function renderAlbums(albums) {
+    console.log(albums[0])
+    let artist = `<h1>${albums[0].artist}</h1>`
+    let albumGroup = albums[0].albums.map(function(album){
+        let songs = album.songs.map(function(song){
+            return `
+                <div class="album-song">
+                    <div><span><i class="fas fa-play"></i></span>${song.title}</div>
+                    <div>${song.length}</div>
+                </div>
+            `
+        })
+
+        return `
+            <div class="album-title">
+                <div><img src="${album.albumCover}"></div>
+                <h3>${album.title}</h3>
+            </div>
+            <div class="album-songs">
+                <hr>
+                ${songs.join('<hr>')}
+                <hr>
+            </div>
+            
+        `
+    })
     return `
         <div class="text-center mt-5">
             <code>${JSON.stringify(albums)}</code>
+            <div id="albums">
+                ${artist}
+                <hr>
+                ${albumGroup.join('')}
+            </div>
         </div>
     `
 }
